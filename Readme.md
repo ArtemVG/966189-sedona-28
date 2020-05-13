@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Артем Гармаш](https://up.htmlacademy.ru/htmlcss/28/user/966189).
-* Наставник: [Сергей Кравченко]https://htmlacademy.ru/profile/id13921().
+* Наставник: [Сергей Кравченко](https://htmlacademy.ru/profile/id13921).
 
 ---
 
