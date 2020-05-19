@@ -3,20 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>Седона</title>
-     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic" rel="stylesheet"> 
-     <link href="css/normalize.css" rel="stylesheet">
-     <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <div class="container">
       <header class="main-header">
         <nav class="main-navigation">
           <a class="main-header-logo">
-          <img src="img/logo-sedona.svg" width="140" height="71" alt="Логотип Седона"></a>
+            <img src="img/logo-sedona.svg" width="140" height="71" alt="Логотип Седона">
+          </a>
           <ul class="site-navigation">
-            <li><a href="info.html">Информация</a></li>
-            <li><a href="photo-video.html">Фото и видео</a></li>
-            <li><a href="state-map.html">Карта штата</a></li>
+            <li><a href="#">Информация</a></li>
+            <li><a href="#">Фото и видео</a></li>
+            <li><a href="#">Карта штата</a></li>
             <li><a href="hotels.html">Гостиницы</a></li>
           </ul>
         </nav>
@@ -28,9 +29,52 @@
           <h1 class="intro-title">Седона-небольшой городок в Аризоне, заслуживающий большего!</h1>
           <p>Расcмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
         </div>
-        <!--Здесь будет отмеченное красным-->
+        <!--отмеченное красным-->
+        <ol class="features">
+          <li class="features-item">
+            <h2 class="features-item-title">Настоящий городок</h2>
+            <p class="item-number">-№1-</p>
+            <p class="item-desc">Седона-не аттракцион для туристов, там течёт своя жизнь</p>
+            <p class="features-item-img"><img src="#" alt="Бунгало"></p>
+            <ul class="benefits">
+              <li class="benefits-item">
+                <h2 class="benefits-item-title">Жильё</h3>
+                <p class="benefits-desc">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+              </li>
+              <li class="benefits-item">
+                <h2 class="benefits-item-title">Еда</h3>
+                <p class="benefits-desc">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+              </li>
+              <li class="benefits-item">
+                <h2 class="benefits-item-title">Сувениры</h3>
+                <p class="benefits-desc">Не только Китайского, но и местного производства</p>
+              </li>
+            </ul>
+          </li>
+          <li class="features-item">
+            <h2 class="features-item-title">Там есть мост дьявола</h2>
+            <p class="item-number">-№2-</p>
+            <p class="item-desc">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+            <p class="features-item-img"><img src="#" alt="Мост дьявола"></p>
+          </li>
+          <li class="features-item">
+            <h2 class="features-item-title">Небольшая площадь</h2>
+            <p class="item-number">-№3-</p>
+            <p class="item-desc">Все достопримечательности находятся очень близко</p>
+          </li>
+          <li class="features-item">
+            <h2 class="features-item-title">Красивая дорога</h2>
+            <p class="item-number">-№4-</p>
+            <p class="item-desc">Ехать в Седону из Лас-Вегаса совсем не скучно</p>
+          </li>
+          <li class="features-item">
+            <h2 class="features-item-title">Мало туристов</h2>
+            <p class="item-number">-№5-</p>
+            <p class="item-desc">Большинство едет в Гранд Каньон и толпится там</p>
+          </li>
+        </ol>
         <div class="search">
-          <h2 class="search-title">Заинтересовались?</h2>
+          <h3 class="search-title">Заинтересовались?</h3>
           <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         </div>
         <button class="search-btn">Поиск гостиницы в Седоне</button>
@@ -58,11 +102,12 @@
               </main>
               <footer class="main-footer">
                 <p class="hashtag">#Visitsedona</p>
+                <p class="phone">тел:+7(495)666-01-66</p>
                 <div class="footer-social">
                   <ul class="social-list">
-                    <li><a class="social-button-twitter" href="#"><span class="visually-hidden">Мы в Твиттере</span></a></li>
-                    <li><a class="social-button-facebook" href="#"><span class="visually-hidden">Мы в Фэйсбуке</span></a></li>
-                    <li><a class="social-button-youtube" href="#"><span class="visually-hidden">Мы в Ютюбе</span></a></li>
+                    <li><a class="social-button social-button-twitter" href="#"><span class="visually-hidden">Мы в Твиттере</span></a></li>
+                    <li><a class="social-button social-button-facebook" href="#"><span class="visually-hidden">Мы в Фэйсбуке</span></a></li>
+                    <li><a class="social-button social-button-youtube" href="#"><span class="visually-hidden">Мы в Ютюбе</span></a></li>
                   </ul>
                 </div>
                 <p class="footer-copyright">Website by
