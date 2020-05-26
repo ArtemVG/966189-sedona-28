@@ -23,7 +23,8 @@
         </nav>
       </header>
       <main>
-        <div class="welcome"><img src="img/intro-welcome.svg" width="459" height="353" alt="Welcome to the georgius Sedona">
+        <div class="welcome">
+          <img src="img/intro-welcome.svg" width="459" height="353" alt="Welcome to the georgius Sedona">
         </div>
         <div class="intro">
           <h1 class="intro-title">Седона-небольшой городок в Аризоне, заслуживающий большего!</h1>
@@ -32,9 +33,11 @@
         <!--отмеченное красным-->
         <ol class="features">
           <li class="features-item">
-            <h2 class="features-item-title">Настоящий городок</h2>
-            <p class="item-number">-№1-</p>
-            <p class="item-desc">Седона-не аттракцион для туристов, там течёт своя жизнь</p>
+            <div class="features-item-wrapper">
+              <h2 class="features-item-title">Настоящий городок</h2>
+              <p class="item-number"></p>
+              <p class="item-desc">Седона-не аттракцион для туристов, там течёт своя жизнь</p>
+            </div>
             <p class="features-item-img"><img src="#" alt="Бунгало"></p>
             <ul class="benefits">
               <li class="benefits-item">
@@ -52,29 +55,31 @@
             </ul>
           </li>
           <li class="features-item">
-            <h2 class="features-item-title">Там есть мост дьявола</h2>
-            <p class="item-number">-№2-</p>
-            <p class="item-desc">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+            <div class="features-item-wrapper">
+              <h2 class="features-item-title">Там есть мост дьявола</h2>
+              <p class="item-number"></p>
+              <p class="item-desc">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+            </div>
             <p class="features-item-img"><img src="#" alt="Мост дьявола"></p>
           </li>
           <li class="features-item">
             <h2 class="features-item-title">Небольшая площадь</h2>
-            <p class="item-number">-№3-</p>
+            <p class="item-number"></p>
             <p class="item-desc">Все достопримечательности находятся очень близко</p>
           </li>
           <li class="features-item">
             <h2 class="features-item-title">Красивая дорога</h2>
-            <p class="item-number">-№4-</p>
+            <p class="item-number"></p>
             <p class="item-desc">Ехать в Седону из Лас-Вегаса совсем не скучно</p>
           </li>
           <li class="features-item">
             <h2 class="features-item-title">Мало туристов</h2>
-            <p class="item-number">-№5-</p>
+            <p class="item-number"></p>
             <p class="item-desc">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
         </ol>
         <div class="search">
-          <h3 class="search-title">Заинтересовались?</h3>
+          <h2 class="search-title">Заинтересовались?</h2>
           <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         </div>
         <button class="search-btn">Поиск гостиницы в Седоне</button>
@@ -82,37 +87,43 @@
           <p class="field-wrapper">
             <label>Дата заезда:</label>
             <input type="text" value="24 апреля 2017">
-            <button><span class="visually-hidden">Выбрать дату</span></button></p>
-            <p class="field-wrapper">
-              <label>Дата выезда:</label>
-              <input type="text" value="4 июля 2017">
-              <button><span class="visually-hidden">Выбрать дату</span></button></p>
-              <p class="field-wrapper-half">
-                <label>Взрослые:</label>
-                <button class="minus"><span class="visually-hidden">Меньше</span>-</button>
-                <input type="number" value="2" step="1">
-                <button class="plus"><span class="visually-hidden">Больше</span>+</button></p>
-                <p class="field-wrapper-half">
-                  <label>Дети:</label>
-                  <button class="minus"><span class="visually-hidden">Меньше</span>-</button>
-                  <input type="number" value="0" step="1">
-                  <button class="plus"><span class="visually-hidden">Больше</span>+</button></p>
-                  <button class="search-form-btn" type="submit">Найти</button>
-                </form>
-              </main>
-              <footer class="main-footer">
-                <p class="hashtag">#Visitsedona</p>
-                <p class="phone">тел:+7(495)666-01-66</p>
-                <div class="footer-social">
-                  <ul class="social-list">
-                    <li><a class="social-button social-button-twitter" href="#"><span class="visually-hidden">Мы в Твиттере</span></a></li>
-                    <li><a class="social-button social-button-facebook" href="#"><span class="visually-hidden">Мы в Фэйсбуке</span></a></li>
-                    <li><a class="social-button social-button-youtube" href="#"><span class="visually-hidden">Мы в Ютюбе</span></a></li>
-                  </ul>
-                </div>
-                <p class="footer-copyright">Website by
-                  <a class="footer-copyright-link" href="https://up.htmlacademy.ru/htmlcss/24">Html Academy</a></p>
-                </footer>
-              </div>
-            </body>
-          </html>
+            <button aria-label="Выбрать"></button>
+          </p>
+          <p class="field-wrapper">
+            <label>Дата выезда:</label>
+            <input type="text" value="4 июля 2017">
+            <button aria-label="Выбрать"></button>
+          </p>
+          <p class="field-wrapper-half">
+            <label>Взрослые:</label>
+            <button class="minus" aria-label="Меньше">-</button>
+            <input type="number" value="2" step="1">
+            <button class="plus" aria-label="Больше">+</button>
+          </p>
+          <p class="field-wrapper-half">
+            <label>Дети:</label>
+            <button class="minus" aria-label="Меньше">-</button>
+            <input type="number" value="0" step="1">
+            <button class="plus" aria-label="Больше">+</button>
+          </p>
+            <button class="search-form-btn" type="submit">Найти</button>
+          </form>
+        </main>
+        <footer class="main-footer">
+          <p class="hashtag-phone">
+            <span class="hashtag">#Visitsedona</span><br>
+            тел:+7(495)666-01-66
+          </p>
+          <div class="footer-social">
+            <ul class="social-list">
+              <li><a class="social-button social-button-twitter" href="#"><span class="visually-hidden">Мы в Твиттере</span></a></li>
+              <li><a class="social-button social-button-facebook" href="#"><span class="visually-hidden">Мы в Фэйсбуке</span></a></li>
+              <li><a class="social-button social-button-youtube" href="#"><span class="visually-hidden">Мы в Ютюбе</span></a></li>
+            </ul>
+          </div>
+          <p class="footer-copyright">Website by
+            <a class="footer-copyright-link" href="https://up.htmlacademy.ru/htmlcss/24">Html Academy</a></p>
+          </footer>
+        </div>
+      </body>
+    </html>

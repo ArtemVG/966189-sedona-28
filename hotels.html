@@ -23,44 +23,57 @@
         </nav>
       </header>
       <main>
-        <form class="search-hotels-form" action="https://echo.htmlacademy.ru/" method="post" oninput="pricevalue.value=price.value">
-          <ul class="search-hotels-form-items">
-            <li class="search-hotels-form-item">
-              <h4 class="search-hotels-form-item-title">Инфраструктура:</h4>
-              <p class="search-hotels-form-list"><input type="checkbox" value="Бассейн" checked>Бассейн</p>
-              <p class="search-hotels-form-list"><input type="checkbox" value="Парковка">Парковка</p>
-              <p class="search-hotels-form-list"><input type="checkbox" value="Wi-fi">Wi-fi</p>
-            </li>
-            <li class="search-hotels-form-item">
-              <h4 class="search-hotels-form-item-title">Тип жилья:</h4>
-              <p class="search-hotels-form-list"><input type="checkbox" value="Гостиница" checked>Гостиница</p>
-              <p class="search-hotels-form-list"><input type="checkbox" value="Мотель" checked>Мотель</p>
-              <p class="search-hotels-form-list"><input type="checkbox" value="Аппартаменты" checked>Аппартаменты</p>
-            </li>
-            <li class="search-hotels-form-item">
-              <h4 class="search-hotels-form-item-title">Стоимость в сутки(р):</h4>
-              <p class="search-hotels-form-list"><output name="pricevalue"></output></p>
-              <p class="search-hotels-form-list"><input type="range" name="price" min="0" max="3000" step="1"></p>
-              <p class="search-hotels-form-list"><button type="submite">Показать</button></p>
-            </li>
-          </ul>
-        </form>
-        <section class="choose-your-hotels">
+        <section class="search-filter">
+          <h2 class="visually-hidden">Фильтр отелей</h2>
+          <form class="search-filter-form" action="https://echo.htmlacademy.ru/" method="get">
+            <fieldset>
+              <legend class="search-filter-title">Инфраструткура:</legend>
+              <ul class="search-filter-form-list">
+                <li class="search-filter-form-item">
+                  <input id="waterpool" type="checkbox" checked></label for="waterpool">Бассейн</label>
+                  <input id="parking" type="checkbox"><label for="parking">Парковка</label>
+                  <input id="Wi-fi" type="checkbox"><label for="Wi-fi">Wi-fi</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <legend class="search-filter-title">Тип жилья:</legend>
+              <ul class="search-filter-form-list">
+                <li classs="search-filter-form-item">
+                  <input id="hotel" type="checkbox" checked><label for="hotel">Гостиница</label>
+                  <input id="motel" type="checkbox" checked><label for="motel">Мотель</label>
+                  <input id="appartments" type="checkbox" checked><label for="appartments">Аппартаменты</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <legend class="search-filter-title">Стоимость в сутки(р):</legend>
+              <ul class="search-filter-form-list">
+                <li classs="search-filter-form-item">
+                  <input id="priceslidervalue" type="text" name="priceslidervalue" placeholder="От 0 до 3000">
+                  <input id="priceslider" type="range" name="priceslider" min="0" max="3000" step="1">
+                </li>
+              </ul>
+            </fieldset>
+            <button type="submite">Показать</button>
+          </form>
+        </section>
+        <section class="choose-your-hotel">
           <div class="search-results">
-            <h4 class="result">Найдено:3</h4>
+            <p class="result">Найдено:3</p>
+            <ul class="sort-list">
+              <li class="sort-item">
+                <span class="sort-item-title">Сортировка:</span>
+                <a href="#" class="sort-list-item">По цене</a>
+                <a href="#" class="sort-list-item">По типу</a>
+                <a href="#" class="sort-list-item">По рейтингу</a>
+              </li>
+            </ul>
           </div>
-          <ul class="sort">
-            <li class="sort-list">
-              <h4 class="sort-list-title">Сортировка:</h4>
-              <p class="sort-list-item">По цене</p>
-              <p class="sort-list-item">По типу</p>
-              <p class="sort-list-item">По рейтингу</p>
-            </li>
-            <li class="sort-list-buttons">
-              <button class="button-up">
-              <button class="button-down">
-            </li>
-          </ul>
+          <div class="sort-list-buttons">
+            <a href="#" class="btn button-up"></a>
+            <a href="#" class="btn button-down"></a>
+          </div>
           <ul class="hotels-list">
             <li class="hotels-item">
               <a class="hotels-item-info" href="hotel.html">
@@ -118,8 +131,10 @@
           </ul>
         </section>
         <footer class="main-footer">
-          <p class="hashtag">#Visitsedona</p>
-          <p class="phone">тел:+7(495)666-01-66</p>
+          <p class="hashtag-phone">
+            <span class="hashtag">#Visitsedona</span><br>
+            тел:+7(495)666-01-66
+          </p>
           <div class="footer-social">
             <ul class="social-list">
               <li><a class="social-button social-button-twitter" href="#"><span class="visually-hidden">Мы в Твиттере</span></a></li>
