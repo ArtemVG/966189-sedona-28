@@ -10,9 +10,9 @@
 	--basic-light-brown: #766357;
 	--basic-brown: #604E43;
 	--basic-extra-brown: #503E33;
-}
+}/*Переделаю*/
 body {
-	min-width: 1220px;
+	min-width: 1200px;
 	margin: 0;
 	padding: 0;
 	font-family: "PT Sans", Arial, sans-serif;
@@ -35,6 +35,7 @@ img {
 
 button {
 	font: inherit;
+	font-weight: 700;
 	text-align: center;
 	color: var(--basic-white);
 	vertical-align: middle;
@@ -42,15 +43,31 @@ button {
     border: none;
 }
 
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+fieldset {
+	margin: 0;
+	padding: 0;
+	border: none;
+}/*Списки переделаю по классам по критерию, филдсету тоже класс или так можно? */
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 .container {
 	margin: 0 auto;
 	width: 1200px;
-	background-color: var(--basic-white);
-	
-}
-
-.main-header {
-
+	background-color: var(--basic-white);	
 }
 
 .site-navigation {
@@ -78,14 +95,28 @@ button {
 
 .welcome {
 	background-image: url("../img/welcome-bg.jpg");
-	background-position: top center;
-	background-size: cover;
+}
+
+.welcome:after {
+	content: "";
+	width: 1200px;
+    height: 57px;
+	background-image: url("../img/intro-mask.svg");
+	display: block;
 }
 
 .intro-title {
 	font-size: 21px;
 	line-height: 26px;
 	font-weight: 700;
+}
+
+.intro {
+	text-align: center;
+}
+
+.intro p {
+	line-height: 26px;
 }
 
 .features-item-wrapper {
@@ -98,7 +129,7 @@ button {
 	text-align: center;
 }
 
-ol>li:nth-child(n+3) {
+.features-item-block {
 	background-color: var(--basic-gray)
 }
 
@@ -106,9 +137,30 @@ ol>li:nth-child(n+3) {
 	list-style: none;
 }
 
+.benefits-item {
+	background-repeat: no-repeat;
+	background-position: 50% 0%;
+}
+
+.item-icon-house {
+	background-image: url("../img/icon-house.svg");
+}
+
+.item-icon-burger {
+	background-image: url("../img/icon-burger.svg")
+}
+
+.item-icon-souvenir {
+	background-image: url("../img/icon-souvenir.svg")
+}
+
+.search {
+	text-align: center;
+}
+
 .search-title {
-	font-size: 21px;
-	line-height: 26px;
+	font-size: 30px;
+	line-height: 24px;
 	font-weight: 700;
 }
 
@@ -117,26 +169,25 @@ ol>li:nth-child(n+3) {
 	font-weight: 700;
 }
 
-.search-btn {
+.search-button {
 	width: 568px;
 	height: 86px;
 	font-size: 21px;
 	line-height: 26px;
 	background-color: var(--basic-light-brown);
-	font-weight: 700;
 }
 
-.search-btn:hover,
-.search-btn:focus {
+.search-button:hover,
+.search-button:focus {
 	background-color: var(--basic-brown);
 }
 
-.search-btn:active {
+.search-button:active {
 	color: var(--basic-white);
 	mix-blend-mode: normal;
     opacity: 0.3;
     background-color: var(--basic-extra-brown);
-    /*Не срабатывает, не могу понять почему?Скопировал из фигмы код*/
+    /*Цвета в фигме нет, а опасити не дает цвету быть корректным*/
 }
 
 .field-wrapper input, 
@@ -167,7 +218,7 @@ ol>li:nth-child(n+3) {
 	text-align: center;
 }
 
-.search-form-btn {
+.search-form-button {
 	width: 458px;
 	height: 60px;
 	font-size: 21px;
@@ -175,12 +226,12 @@ ol>li:nth-child(n+3) {
 	background-color: var(--basic-light-blue);
 }
 	
-.search-form-btn:hover,
-.search-form-btn:focus {
+.search-form-button:hover,
+.search-form-button:focus {
 	background-color: var(--basic-blue);
 }
 
-.search-form-btn:active {
+.search-form-button:active {
 	color: #88b6d1;
 	background-color: var(--basic-extra-blue);
 }
@@ -188,7 +239,7 @@ ol>li:nth-child(n+3) {
 .filter {
     color: var(--basic-white);
     background-color: var(--basic-blue);
-    background-image: url("../img/background-inner.png");
+    background-image: url("../img/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -216,26 +267,55 @@ ol>li:nth-child(n+3) {
     border-radius: 2px;
 }
 
-.filter-form-btn {
+.filter-form-button {
 	width: 137px;
     height: 36px;
 	border: 2px solid #FFFFFF;
     border-radius: 2px;
     background: rgba(0, 0, 0, 0);
 }
-.filter-form-btn:hover,
-.filter-form-btn:focus {
+.filter-form-button:hover,
+.filter-form-button:focus {
 	color: var(--basic-black);
 	background-color: var(--basic-white)
 }
 
+.search-results p {
+	font-weight: 700;
+    font-size: 21px;
+    line-height: 26px;
+}
+
+.sort-item {
+	font-size: 12px;
+    line-height: 18px;
+}
+
+.sort-list-item-active {
+	color: var(--basic-light-blue);
+}
+
+.sort-list-item {
+    color: #000000;
+    opacity: 0.3;
+    text-decoration: underline;
+}
+
+.sort-list-item:hover,
+.sort-list-item:focus {
+	color: var(--basic-light-blue);
+}
+
+.sort-list-item:active {
+	color: var(--basic-black);
+	text-decoration: none;
+}
+
 .button-details {
-	text-align: center;
 	font-size: 14px;
 	line-height: 21px;
 	color: var(--basic-white);
 	background-color: var(--basic-light-blue);
-	border: none;
 	font-weight: 700;
 }
 
@@ -250,12 +330,10 @@ ol>li:nth-child(n+3) {
 }
 
 .button-reserve {
-	text-align: center;
 	font-size: 14px;
 	line-height: 21px;
 	color: var(--basic-white);
 	background-color: var(--basic-light-brown);
-	border: none;
 	font-weight: 700;
 }
 
@@ -305,16 +383,16 @@ ol>li:nth-child(n+3) {
 	background-color: var(--basic-extra-blue);
 }
 
-.footer-copyright-link {
+.footer-copyright {
 	color: var(--basic-black);
 }
 
-.footer-copyright-link a:hover svg,
-.footer-copyright-link a:focus svg {
+.footer-copyright a:hover svg,
+.footer-copyright a:focus svg {
 	fill: var(--basic-light-blue);
 }
 
-.footer-copyright-link:active {
+.footer-copyright:active {
 	color: #b2b2b2;
 }
 
@@ -322,8 +400,4 @@ ol>li:nth-child(n+3) {
 	font-weight: 700;
 	font-size: 21px;
     line-height: 26px;
-}
-
-.footer-copiright {
-	line-height: 26px;
 }
