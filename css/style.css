@@ -10,7 +10,7 @@
 	--basic-light-brown: #766357;
 	--basic-brown: #604E43;
 	--basic-extra-brown: #503E33;
-}/*Переделаю*/
+}/*Переделать*/
 body {
 	min-width: 1200px;
 	margin: 0;
@@ -21,6 +21,7 @@ body {
 	font-weight: 400;
 	color: var(--basic-black);
 	text-transform: uppercase;
+	text-align: center;
 	background-color: var(--basic-light-gray);
 }
 
@@ -28,33 +29,17 @@ a {
 	text-decoration: none;
 	color: var(--basic-black);
 }
+
 img {
 	max-width: 100%;
 	height: auto;
 }
 
-button {
-	font: inherit;
-	font-weight: 700;
-	text-align: center;
-	color: var(--basic-white);
-	vertical-align: middle;
-	text-transform: uppercase;
-    border: none;
-}
-
-ol,
-ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-fieldset {
+.fieldset-wrap {
 	margin: 0;
 	padding: 0;
 	border: none;
-}/*Списки переделаю по классам по критерию, филдсету тоже класс или так можно? */
+}
 
 .visually-hidden {
   position: absolute;
@@ -62,6 +47,16 @@ fieldset {
   width: 1px;
   height: 1px;
   margin: -1px;
+}
+
+.button {
+	font: inherit;
+	font-weight: 700;
+	text-align: center;
+	color: var(--basic-white);
+	vertical-align: middle;
+	text-transform: uppercase;
+    border: none;
 }
 
 .container {
@@ -95,13 +90,16 @@ fieldset {
 
 .welcome {
 	background-image: url("../img/welcome-bg.jpg");
+	background-size: cover;
+	text-align: center;
 }
 
 .welcome:after {
 	content: "";
-	width: 1200px;
+	width: 100%;
     height: 57px;
 	background-image: url("../img/intro-mask.svg");
+	background-repeat: no-repeat;
 	display: block;
 }
 
@@ -109,10 +107,6 @@ fieldset {
 	font-size: 21px;
 	line-height: 26px;
 	font-weight: 700;
-}
-
-.intro {
-	text-align: center;
 }
 
 .intro p {
@@ -125,6 +119,8 @@ fieldset {
 }
 
 .features {
+	margin: 0;
+	padding: 0;
 	list-style: none;
 	text-align: center;
 }
@@ -134,12 +130,15 @@ fieldset {
 }
 
 .benefits {
+	margin: 0;
+	padding: 0;
 	list-style: none;
 }
 
 .benefits-item {
 	background-repeat: no-repeat;
 	background-position: 50% 0%;
+	background-size: 75px 70px;
 }
 
 .item-icon-house {
@@ -170,8 +169,8 @@ fieldset {
 }
 
 .search-button {
+	padding: 30px 124px 30px 125px;
 	width: 568px;
-	height: 86px;
 	font-size: 21px;
 	line-height: 26px;
 	background-color: var(--basic-light-brown);
@@ -183,11 +182,8 @@ fieldset {
 }
 
 .search-button:active {
-	color: var(--basic-white);
-	mix-blend-mode: normal;
-    opacity: 0.3;
+	color: rgba(255, 255, 255, 0.3);
     background-color: var(--basic-extra-brown);
-    /*Цвета в фигме нет, а опасити не дает цвету быть корректным*/
 }
 
 .field-wrapper input, 
@@ -219,8 +215,8 @@ fieldset {
 }
 
 .search-form-button {
+	padding: 16px 182px 16px 181px;
 	width: 458px;
-	height: 60px;
 	font-size: 21px;
 	line-height: 26px;
 	background-color: var(--basic-light-blue);
@@ -239,9 +235,8 @@ fieldset {
 .filter {
     color: var(--basic-white);
     background-color: var(--basic-blue);
-    background-image: url("../img/background.jpg");
+    background-image: url("../img/filter-background.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .filter-title {
@@ -268,8 +263,9 @@ fieldset {
 }
 
 .filter-form-button {
+	padding-top: 7px;
+	padding-bottom: 8px;
 	width: 137px;
-    height: 36px;
 	border: 2px solid #FFFFFF;
     border-radius: 2px;
     background: rgba(0, 0, 0, 0);
@@ -286,6 +282,12 @@ fieldset {
     line-height: 26px;
 }
 
+.sort-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
 .sort-item {
 	font-size: 12px;
     line-height: 18px;
@@ -296,8 +298,7 @@ fieldset {
 }
 
 .sort-list-item {
-    color: #000000;
-    opacity: 0.3;
+    color: rgba(0, 0, 0, 0.3);
     text-decoration: underline;
 }
 
@@ -312,6 +313,8 @@ fieldset {
 }
 
 .button-details {
+	width: 110px;
+	padding: 3px 16px 3px 17px;
 	font-size: 14px;
 	line-height: 21px;
 	color: var(--basic-white);
@@ -330,6 +333,8 @@ fieldset {
 }
 
 .button-reserve {
+	width: 142px;
+	padding: 3px 17px 3px 16px;
 	font-size: 14px;
 	line-height: 21px;
 	color: var(--basic-white);
@@ -365,7 +370,13 @@ fieldset {
 	padding: 10px 15px;
 }
 
-.social-list a {
+.social-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.social-button {
 	width: 46px;
 	height: 48px;
 	color: var(--basic-white);
@@ -373,12 +384,12 @@ fieldset {
 	border: none;
 }
 
-.social-list a:hover,
-.social-list a:focus {
+.social-button:hover,
+.social-button:focus {
 	background-color: var(--basic-blue);
 }
 
-.social-list a:active {
+.social-button:active {
 	color: #88b6d1;
 	background-color: var(--basic-extra-blue);
 }
@@ -387,17 +398,36 @@ fieldset {
 	color: var(--basic-black);
 }
 
-.footer-copyright a:hover svg,
-.footer-copyright a:focus svg {
+.footer-copyright-link:hover svg,
+.footer-copyright-link:focus svg {
 	fill: var(--basic-light-blue);
 }
 
-.footer-copyright:active {
-	color: #b2b2b2;
+.footer-copyright-link:active svg {
+	fill: #b2b2b2;
 }
 
 .hashtag-phone {
 	font-weight: 700;
 	font-size: 21px;
     line-height: 26px;
+}
+
+.social-button svg {
+	fill: var(--basic-white);
+
+}
+
+.social-button-twitter svg {
+	width: 17px;
+    height: 17px;
+}
+
+.social-button-facebook svg {
+	width: 12px;
+    height: 22px;
+}
+.social-button-youtube svg {
+	width: 20px;
+    height: 16px;
 }
