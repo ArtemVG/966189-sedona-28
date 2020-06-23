@@ -35,6 +35,24 @@ img {
 	height: auto;
 }
 
+.page {
+	height: 100%;
+}
+
+.page-body {
+	min-height: 100%;
+	display: grid;
+	grid-template-rows: min-content 1fr min-content;
+	align-content: start;
+
+}
+
+.main-navigation {
+	align-items: center;
+	width: 100%;
+
+}
+
 .fieldset-wrap {
 	margin: 0;
 	padding: 0;
@@ -65,7 +83,21 @@ img {
 	background-color: var(--basic-white);	
 }
 
+.main-navigation {
+
+}
+
+.main-header-logo {
+	position: absolute;
+	left: 600px;
+}
+
 .site-navigation {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 56px;
 	list-style: none;
 	font-weight: 700;
 	color: var(--basic-black);
@@ -103,13 +135,26 @@ img {
 	display: block;
 }
 
+.welcome img {
+	margin-top: 77px;
+}
+
+.intro {
+	margin-top: 42px;
+	margin-left: 340px;
+	margin-bottom: 51px;
+
+}
+
 .intro-title {
+	width: 470px;
 	font-size: 21px;
 	line-height: 26px;
 	font-weight: 700;
 }
 
 .intro p {
+	width: 519px;
 	line-height: 26px;
 }
 
@@ -119,10 +164,35 @@ img {
 }
 
 .features {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 256px 330px 256px 256px;
 	margin: 0;
 	padding: 0;
 	list-style: none;
 	text-align: center;
+}
+
+.item-1 {
+	grid-column-start: 1;
+	grid-column-end: 4;
+	display: flex;
+}
+
+.item-2 {
+
+	grid-column-start: 1;
+	grid-column-end: 4;
+
+}
+
+.item-3 {
+
+	grid-column-start: 1;
+	grid-column-end: 4;
+	display: flex;
+	flex-direction: row-reverse;
+
 }
 
 .features-item-block {
@@ -130,6 +200,7 @@ img {
 }
 
 .benefits {
+	display: flex;
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -232,7 +303,9 @@ img {
 	background-color: var(--basic-extra-blue);
 }
 
-.filter {
+.filter-form {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
     color: var(--basic-white);
     background-color: var(--basic-blue);
     background-image: url("../img/filter-background.jpg");
@@ -368,6 +441,11 @@ img {
 .hotels-item-rating p {
 	background-color: var(--basic-light-gray);
 	padding: 10px 15px;
+}
+
+.main-footer {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
 }
 
 .social-list {
