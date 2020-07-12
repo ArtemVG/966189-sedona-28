@@ -81,24 +81,24 @@
         <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
           <p class="field-wrapper">
             <label>Дата заезда:</label>
-            <input type="text" value="24 апреля 2017">
+            <input type="text" name="checkin" value="24 апреля 2017">
             <button aria-label="Выбрать"></button>
           </p>
           <p class="field-wrapper">
             <label>Дата выезда:</label>
-            <input type="text" value="4 июля 2017">
+            <input type="text" name="checkout" value="4 июля 2017">
             <button aria-label="Выбрать"></button>
           </p>
           <p class="field-wrapper-half">
             <label>Взрослые:</label>
             <button class="minus" aria-label="Меньше">-</button>
-            <input type="number" value="2" step="1">
+            <input type="number" name="number" value="2" step="1">
             <button class="plus" aria-label="Больше">+</button>
           </p>
           <p class="field-wrapper-half">
             <label>Дети:</label>
             <button class="minus" aria-label="Меньше">-</button>
-            <input type="number" value="0" step="1">
+            <input type="number" name="number" value="0" step="1">
             <button class="plus" aria-label="Больше">+</button>
           </p>
           <button class="button search-form-button" type="submit">Найти</button>

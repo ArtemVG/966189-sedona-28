@@ -30,15 +30,15 @@
               <legend class="filter-title">Инфраструткура:</legend>
               <ul class="filter-form-list">
                 <li class="filter-form-item">
-                  <input id="waterpool" type="checkbox" checked>
+                  <input id="waterpool" type="checkbox" checked namme="waterpool">
                   <label for="waterpool">Бассейн</label>
                 </li>
                 <li class="filter-form-item">
-                  <input id="parking" type="checkbox">
+                  <input id="parking" type="checkbox" name="parking">
                   <label for="parking">Парковка</label>
                 </li>
                 <li class="filter-form-item">
-                  <input id="Wi-fi" type="checkbox">
+                  <input id="Wi-fi" type="checkbox" name="wi-fi">
                   <label for="Wi-fi">Wi-fi</label>
                 </li>
               </ul>
@@ -47,15 +47,15 @@
               <legend class="filter-title">Тип жилья:</legend>
               <ul class="filter-form-list">
                 <li classs="filter-form-item">
-                  <input id="hotel" type="checkbox" checked>
+                  <input id="hotel" type="checkbox" checked name="hotel">
                   <label for="hotel">Гостиница</label>
                 </li>
                 <li classs="filter-form-item">
-                  <input id="motel" type="checkbox" checked>
+                  <input id="motel" type="checkbox" checked name="motel">
                   <label for="motel">Мотель</label>
                 </li>
                 <li classs="filter-form-item">
-                  <input id="appartments" type="checkbox" checked>
+                  <input id="appartments" type="checkbox" checked name="appartments">
                   <label for="appartments">Аппартаменты</label>
                 </li>
               </ul>
@@ -105,7 +105,7 @@
                 <img src="img/hotel-avatar-1.jpg" width="135" height="90"  alt="Hotel">
               </a>
               <div class="hotels-item-info">
-                <h2>
+                <h2 class="hotels-item-heading">
                 <a class="hotels-item-image" href="#">Amara resort&spa</a>
                 </h2>
                 <p>Гостница</p>
@@ -124,7 +124,7 @@
                 <img src="img/hotel-avatar-2.jpg" width="135" height="90" alt="Hotel">
               </a>
               <div class="hotels-item-info">
-                <h2><a class="hotels-item-image" href="#">Desert quail inn</a></h2>
+                <h2 class="hotels-item-heading"><a class="hotels-item-image" href="#">Desert quail inn</a></h2>
                 <p>Мотель</p>
                 <p>от 3000 р</p>
                 <a class="button button-details" href="#">Подробнее</a>
@@ -141,7 +141,7 @@
                 <img src="img/hotel-avatar-3.jpg" width="135" height="90" alt="Hotel">
               </a>
               <div class="hotels-item-info">
-                <h2><a class="hotels-item-image" href="#">Villas at poco Diablo</a></h2>
+                <h2 class="hotels-item-heading"><a class="hotels-item-image" href="#">Villas at poco Diablo</a></h2>
                 <p>Апартаменты</p>
                 <p>от 2000 р</p>
                 <a class="button button-details" href="#">Подробнее</a>
@@ -188,17 +188,3 @@
       </div>
     </body>
   </html>
-  <!-- <fieldset class="fieldset-wrap">
-    <legend class="filter-title">Инфраструткура:</legend>
-    <ul class="filter-form-list">
-      <li class="filter-form-item">
-        <input id="waterpool" type="checkbox" checked><label for="waterpool">Бассейн</label>
-      </li>
-      <li class="filter-form-item">
-        <input id="parking" type="checkbox"><label for="parking">Парковка</label>
-      </li>
-      <li class="filter-form-item">
-        <input id="Wi-fi" type="checkbox"><label for="Wi-fi">Wi-fi</label>
-      </li>
-    </ul>
-  </fieldset>-->
